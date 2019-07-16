@@ -38,13 +38,11 @@ Constraint Set 4: For each food i∈F, do not exceed the maximum allowable numbe
 xi≤Fmaxi,∀i∈F
 """
 
-# pdb.set_trace()
-
 # Define problem
 prob = pulp.LpProblem("Simple Diet Problem", pulp.LpMinimize)
 
 # Read the first few rows dataset in a Pandas DataFrame
-df = pd.read_excel("diet.xls", nrows=17)
+df = pd.read_excel("data/diet.xls", nrows=17)
 
 # Create a list of the food items
 foods = df.pop('Foods').tolist()
